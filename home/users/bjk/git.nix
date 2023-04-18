@@ -13,6 +13,11 @@
     extraConfig = {
       feature.manyFiles = true;
       init.defaultBranch = "main";
+      gpg.format = "ssh";
+    };
+    signing = {
+      key = "~/.ssh/id_rsa";
+      signByDefault = true;
     };
     lfs.enable = true;
     ignores = [ ".direnv" "result" ];
